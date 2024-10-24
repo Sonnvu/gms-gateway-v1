@@ -1,12 +1,12 @@
 ﻿# gms-gateway-v1
 ## Testing with Postman
 ### Run Backend Application
-- ./gradlew build
-- ./gradlew bootRun
+- `./gradlew build`
+- `./gradlew bootRun`
 ### Sending request using Postman
 - Go to `header`
-- Key: Content-Type
-- Value: application/json
+- Key: `Content-Type`
+- Value: `application/json`
 ![image](https://github.com/user-attachments/assets/57690793-652a-4e4a-a908-8814ee457929)
 
 - Body: raw
