@@ -1,6 +1,6 @@
 ﻿# gms-gateway-v1
 ## Testing with Postman
-### Run Backend Application
+### Running Backend Application
 - `./gradlew build`
 - `./gradlew bootRun`
 ### Sending request using Postman
