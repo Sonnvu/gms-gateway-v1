@@ -2,17 +2,17 @@ package pitt.edu.gmsapigatewayv1.domain.model;
 
 import java.time.Instant;
 
-public class TemperatureReading {
-    private float temperature;
+public class LightRequest {
+    private float lightReading;
     private Instant timestamp;
 
     // Getters and setters
-    public float getTemperature() {
-        return temperature;
+    public float getLightReading() {
+        return lightReading;
     }
 
-    public void setTemperature(float temperature) {
-        this.temperature = temperature;
+    public void setLightReading(float lightReading) {
+        this.lightReading = lightReading;
     }
 
     public Instant getTimestamp() {
