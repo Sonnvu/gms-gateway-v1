@@ -4,7 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import pitt.edu.gmsapigatewayv1.domain.model.LightRequest;
+import pitt.edu.gmsapigatewayv1.domain.model.DTO.LightReadingDTO;
 
 import java.time.Instant;
 
@@ -43,7 +43,7 @@ public class SensorModuleController {
     }
 
     @GetMapping("/sensor/light")
-    public ResponseEntity<String> receiveTemperature(@RequestBody LightRequest request) {
+    public ResponseEntity<String> receiveTemperature(@RequestBody LightReadingDTO request) {
         // Access the temperature and timestamp values
         float light = request.getLightReading();
         Instant timestamp = request.getTimestamp();
