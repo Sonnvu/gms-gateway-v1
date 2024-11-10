@@ -1,8 +1,8 @@
 package pitt.edu.gmsapigatewayv1.service;
 
 import lombok.AllArgsConstructor;
+import org.hibernate.query.spi.Limit;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Limit;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.ResourceAccessException;
 import pitt.edu.gmsapigatewayv1.domain.exception.ResourceNotFoundException;
@@ -37,4 +37,5 @@ public class LightService {
         return light_readings.stream().map(LightReadingMapper::mapToLightReadingDTO)
                 .collect(Collectors.toList());
     }
+
 }
