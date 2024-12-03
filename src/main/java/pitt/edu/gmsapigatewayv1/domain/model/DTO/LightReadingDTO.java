@@ -16,4 +16,5 @@ public class LightReadingDTO {
     // Getters and setters
     private float lightReading;
     private Instant timestamp;
+    private long moduleId;
 }

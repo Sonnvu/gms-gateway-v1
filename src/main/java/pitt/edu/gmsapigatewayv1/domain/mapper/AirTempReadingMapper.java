@@ -10,7 +10,8 @@ public class AirTempReadingMapper {
         return new AirTempReadingDTO(
                 airTempReadingDAO.getId(),
                 airTempReadingDAO.getAirTempReading(),
-                airTempReadingDAO.getTimestamp()
+                airTempReadingDAO.getTimestamp(),
+                airTempReadingDAO.getModuleId()
         );
     }
 
@@ -18,7 +19,8 @@ public class AirTempReadingMapper {
         return new AirTempReadingDAO(
                 airTempReadingDTO.getId(),
                 airTempReadingDTO.getAirTempReading(),
-                airTempReadingDTO.getTimestamp()
+                airTempReadingDTO.getTimestamp(),
+                airTempReadingDTO.getModuleId()
         );
     }
 }

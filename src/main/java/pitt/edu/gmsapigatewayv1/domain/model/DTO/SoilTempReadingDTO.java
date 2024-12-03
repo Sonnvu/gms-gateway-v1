@@ -16,4 +16,5 @@ public class SoilTempReadingDTO {
     // Getters and setters
     private float soilTempReading;
     private Instant timestamp;
+    private long moduleId;
 }

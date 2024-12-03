@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pitt.edu.gmsapigatewayv1.domain.model.DTO.LightReadingDTO;
 import pitt.edu.gmsapigatewayv1.domain.model.DTO.SoilTempReadingDTO;
 import pitt.edu.gmsapigatewayv1.service.SoilTempService;
 
@@ -25,5 +26,11 @@ public class SoilTemperatureController {
     public ResponseEntity<List<SoilTempReadingDTO>> getAllSoilTempReadings() {
         List<SoilTempReadingDTO> Soil_temp_readings = SoilTempService.getAllSoilTempReadings();
         return ResponseEntity.ok(Soil_temp_readings);
+    }
+
+    @GetMapping("/all/{module_id}")
+    public ResponseEntity<List<SoilTempReadingDTO>> getLightReadingsByModuleId(@PathVariable("module_id") long moduleId) {
+        List<SoilTempReadingDTO> soil_temp_readings = SoilTempService.getSoilTempReadingsByModuleId(moduleId);
+        return ResponseEntity.ok(soil_temp_readings);
     }
 }

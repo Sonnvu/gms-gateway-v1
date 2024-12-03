@@ -2,8 +2,11 @@ package pitt.edu.gmsapigatewayv1.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import pitt.edu.gmsapigatewayv1.domain.mapper.LightReadingMapper;
 import pitt.edu.gmsapigatewayv1.domain.mapper.SoilTempReadingMapper;
+import pitt.edu.gmsapigatewayv1.domain.model.DAO.LightReadingDAO;
 import pitt.edu.gmsapigatewayv1.domain.model.DAO.SoilTempReadingDAO;
+import pitt.edu.gmsapigatewayv1.domain.model.DTO.LightReadingDTO;
 import pitt.edu.gmsapigatewayv1.domain.model.DTO.SoilTempReadingDTO;
 import pitt.edu.gmsapigatewayv1.domain.repository.SoilTempRepository;
 import pitt.edu.gmsapigatewayv1.domain.repository.SoilTempRepository;
@@ -25,6 +28,13 @@ public class SoilTempService {
     public List<SoilTempReadingDTO> getAllSoilTempReadings() {
         List<SoilTempReadingDAO> Soil_temp_readings = soilTempRepository.findAll();
         return Soil_temp_readings.stream().map(SoilTempReadingMapper::mapToSoilTempDTO)
+                .collect(Collectors.toList());
+    }
+
+    public List<SoilTempReadingDTO> getSoilTempReadingsByModuleId(long moduleId) {
+        List<SoilTempReadingDAO> soil_temp_readings = soilTempRepository.findByModuleId(moduleId);
+        return soil_temp_readings.stream()
+                .map(SoilTempReadingMapper::mapToSoilTempDTO)
                 .collect(Collectors.toList());
     }
 }

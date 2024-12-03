@@ -8,7 +8,8 @@ public class SoilTempReadingMapper {
         return new SoilTempReadingDTO(
                 SoilTempReadingDAO.getId(),
                 SoilTempReadingDAO.getSoilTempReading(),
-                SoilTempReadingDAO.getTimestamp()
+                SoilTempReadingDAO.getTimestamp(),
+                SoilTempReadingDAO.getModuleId()
         );
     }
 
@@ -16,7 +17,8 @@ public class SoilTempReadingMapper {
         return new SoilTempReadingDAO(
                 SoilTempReadingDTO.getId(),
                 SoilTempReadingDTO.getSoilTempReading(),
-                SoilTempReadingDTO.getTimestamp()
+                SoilTempReadingDTO.getTimestamp(),
+                SoilTempReadingDTO.getModuleId()
         );
     }
 }

@@ -16,4 +16,5 @@ public class AirTempReadingDTO {
     // Getters and setters
     private float airTempReading;
     private Instant timestamp;
+    private long moduleId;
 }

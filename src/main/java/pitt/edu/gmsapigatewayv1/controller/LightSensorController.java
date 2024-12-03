@@ -35,6 +35,12 @@ public class LightSensorController {
         return ResponseEntity.ok(light_readings);
     }
 
+    @GetMapping("/all/{module_id}")
+    public ResponseEntity<List<LightReadingDTO>> getLightReadingsByModuleId(@PathVariable("module_id") long moduleId) {
+        List<LightReadingDTO> lightReadings = lightService.getLightReadingsByModuleId(moduleId);
+        return ResponseEntity.ok(lightReadings);
+    }
+
     @GetMapping("/graph")
     public ResponseEntity<List<LightReadingDTO>> getTopFiftyLightReadings() {
         return null;

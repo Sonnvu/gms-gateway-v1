@@ -28,4 +28,10 @@ public class AirTemperatureController {
         List<AirTempReadingDTO> air_temp_readings = airTempService.getAllAirTempReadings();
         return ResponseEntity.ok(air_temp_readings);
     }
+
+    @GetMapping("/all/{module_id}")
+    public ResponseEntity<List<AirTempReadingDTO>> getAirTempReadingsByModuleId(@PathVariable("module_id") long moduleId) {
+        List<AirTempReadingDTO> air_temp_readings = airTempService.getAirTempReadingsByModuleId(moduleId);
+        return ResponseEntity.ok(air_temp_readings);
+    }
 }

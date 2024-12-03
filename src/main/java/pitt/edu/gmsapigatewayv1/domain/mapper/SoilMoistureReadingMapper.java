@@ -8,7 +8,8 @@ public class SoilMoistureReadingMapper {
         return new SoilMoistureReadingDTO(
                 SoilMoistureReadingDAO.getId(),
                 SoilMoistureReadingDAO.getSoilMoistureReading(),
-                SoilMoistureReadingDAO.getTimestamp()
+                SoilMoistureReadingDAO.getTimestamp(),
+                SoilMoistureReadingDAO.getModuleId()
         );
     }
 
@@ -16,7 +17,8 @@ public class SoilMoistureReadingMapper {
         return new SoilMoistureReadingDAO(
                 SoilMoistureReadingDTO.getId(),
                 SoilMoistureReadingDTO.getSoilMoistureReading(),
-                SoilMoistureReadingDTO.getTimestamp()
+                SoilMoistureReadingDTO.getTimestamp(),
+                SoilMoistureReadingDTO.getModuleId()
         );
     }
 }

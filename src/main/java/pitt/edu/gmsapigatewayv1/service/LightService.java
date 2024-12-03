@@ -38,4 +38,10 @@ public class LightService {
                 .collect(Collectors.toList());
     }
 
+    public List<LightReadingDTO> getLightReadingsByModuleId(long moduleId) {
+        List<LightReadingDAO> lightReadings = lightRepository.findByModuleId(moduleId);
+        return lightReadings.stream()
+                .map(LightReadingMapper::mapToLightReadingDTO)
+                .collect(Collectors.toList());
+    }
 }

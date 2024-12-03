@@ -8,7 +8,8 @@ public class LightReadingMapper {
         return new LightReadingDTO(
                 lightReadingDAO.getId(),
                 lightReadingDAO.getLightReading(),
-                lightReadingDAO.getTimestamp()
+                lightReadingDAO.getTimestamp(),
+                lightReadingDAO.getModuleId()
         );
     }
 
@@ -16,7 +17,8 @@ public class LightReadingMapper {
         return new LightReadingDAO(
                 lightReadingDTO.getId(),
                 lightReadingDTO.getLightReading(),
-                lightReadingDTO.getTimestamp()
+                lightReadingDTO.getTimestamp(),
+                lightReadingDTO.getModuleId()
         );
     }
 }

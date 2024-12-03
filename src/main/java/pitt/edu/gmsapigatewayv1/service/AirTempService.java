@@ -29,4 +29,11 @@ public class AirTempService {
         return air_temp_readings.stream().map(AirTempReadingMapper::mapToAirTempDTO)
                 .collect(Collectors.toList());
     }
+
+    public List<AirTempReadingDTO> getAirTempReadingsByModuleId(long moduleId) {
+        List<AirTempReadingDAO> air_temp_readings = airTempRepository.findByModuleId(moduleId);
+        return air_temp_readings.stream()
+                .map(AirTempReadingMapper::mapToAirTempDTO)
+                .collect(Collectors.toList());
+    }
 }

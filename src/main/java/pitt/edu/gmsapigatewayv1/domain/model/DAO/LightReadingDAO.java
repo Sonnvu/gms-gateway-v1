@@ -20,4 +20,7 @@ public class LightReadingDAO {
 
     @Column(name = "timestamp", nullable = false)
     private Instant timestamp;
+
+    @Column(name = "module_id", nullable = false)
+    private long moduleId;
 }
